@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
+      className={`transition duration-500 ease-in-out transform ${
         scroll ? "bg-gray-400" : "bg-transparent"
       } fixed flex justify-between items-center w-full z-50 p-4 text-2xl`}
     >
