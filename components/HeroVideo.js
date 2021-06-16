@@ -21,11 +21,11 @@ const HeroVideo = () => {
         <source src="/web16-9video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="text-gray-900 p-4 h-1/3 flex flex-col justify-around">
-        <h5 className="text-2xl mb-4">
+      <div className="text-gray-900 p-4">
+        <h5 className="text-2xl mb-5">
           We believe Women perform best through tailored nutritional coaching
         </h5>
-        <h6 className="font-thin text-lg mb-4">
+        <h6 className="font-thin text-lg mb-5">
           Schedule a free 15 minute call to see how we can help you
         </h6>
         <button className="bg-pink-200 text-white font-light p-2 w-full rounded-lg">
