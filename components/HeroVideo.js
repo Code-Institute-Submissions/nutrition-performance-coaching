@@ -1,6 +1,6 @@
 const HeroVideo = () => {
   return (
-    <header className="relative flex flex-col justify-start min-h-screen overflow-hidden">
+    <header className="relative flex flex-col justify-start h-screen overflow-y-auto overflow-x-hidden">
       <div className="relative z-30 p-4 text-2xl text-white bg-gray-500 bg-opacity-50 w-full h-4/6 ">
         <div className="mt-20">
           <h1 className="text-4xl mb-6 uppercase">Performance</h1>
@@ -28,7 +28,7 @@ const HeroVideo = () => {
         <h6 className="font-thin text-lg mb-5">
           Schedule a free 15 minute call to see how we can help you
         </h6>
-        <button className="bg-pink-200 text-white font-light p-2 w-full rounded-lg">
+        <button className="bg-pink-200 text-white font-light p-2 w-full rounded-lg mb-5">
           BOOK A FREE CONSULTATION TODAY
         </button>
       </div>
