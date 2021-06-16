@@ -1,6 +1,36 @@
+import { useState, useEffect } from "react";
+
 const Navbar = () => {
+  const [scroll, setScroll] = useState();
+  const [open, setOpen] = useState();
+
+  const handleOpen = () => {
+    if (!open) {
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const handleScroll = () => {
+    if (window.scrollY >= 1) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
   return (
-    <nav className="fixed flex justify-between items-center w-full z-50 p-4 text-2xl">
+    <nav
+      className={`${
+        scroll ? "bg-gray-400" : "bg-transparent"
+      } fixed flex justify-between items-center w-full z-50 p-4 text-2xl`}
+    >
       <p className="text-white">
         <span className="">P</span>
         <span className="font-light">N</span>
@@ -11,6 +41,8 @@ const Navbar = () => {
         width={24}
         height={15}
         viewBox="0 0 24 15"
+        onClick={handleOpen}
+        className="z-50"
       >
         <line
           id="Line_2"
@@ -40,6 +72,17 @@ const Navbar = () => {
           strokeWidth={1}
         />
       </svg>
+      <menu
+        className={`transform ${
+          open ? "-translate-x-0" : "translate-x-full"
+        } top-0 right-0 mt-0 w-5/12 bg-gray-400 fixed h-screen overflow-auto ease-in-out transition-all duration-300 lg:translate-x-0 lg:h-40 lg:w-full`}
+      >
+        <ul className="text-white mt-20 flex flex-col lg:flex-row justify-start w-full lg:mx-auto lg:flex lg:justify-between lg:max-w-screen-sm">
+          <li className="border-b border-yellow-400 pb-1 mb-2 w-20 lg:text-center">Account</li>
+          <li className="border-b border-yellow-400 pb-1 mb-2 w-20 lg:text-center">Teams</li>
+          <li className="border-b border-yellow-400 pb-1 mb-2 w-20 lg:text-center">Payments</li>
+        </ul>
+      </menu>
     </nav>
   );
 };

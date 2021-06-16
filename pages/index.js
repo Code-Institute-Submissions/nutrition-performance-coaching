@@ -1,7 +1,10 @@
-import HeroVideo from "../components/HeroVideo"
+import HeroVideo from "../components/HeroVideo";
 
 export default function Home() {
   return (
-    <HeroVideo />
+    <main>
+      <HeroVideo />
+      <div>Test consten</div>
+    </main>
   );
 }

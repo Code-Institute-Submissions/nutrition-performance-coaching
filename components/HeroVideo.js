@@ -1,7 +1,7 @@
 const HeroVideo = () => {
   return (
-    <header className="relative flex flex-col justify-start h-screen overflow-y-auto overflow-x-hidden">
-      <div className="relative z-30 p-4 text-2xl text-white bg-gray-500 bg-opacity-50 w-full h-4/6 ">
+    <header className="relative flex flex-col justify-start overflow-y-auto overflow-x-hidden">
+      <div className="relative z-30 p-4 text-2xl text-white bg-gray-500 bg-opacity-50 w-full h-96 ">
         <div className="mt-20">
           <h1 className="text-4xl mb-6 uppercase">Performance</h1>
           <h2 className="text-4xl mb-6 font-light uppercase">Nutrition</h2>
@@ -16,12 +16,12 @@ const HeroVideo = () => {
         loop="loop"
         muted
         playsInline
-        className="absolute z-10 w-auto min-w-full max-w-none h-4/6"
+        className="absolute z-10 w-auto min-w-full max-w-none h-96"
       >
         <source src="/web16-9video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="text-gray-900 p-4 h-1/3">
+      <div className="relative text-gray-900 p-4">
         <h5 className="text-2xl mb-5">
           We believe Women perform best through tailored nutritional coaching
         </h5>
