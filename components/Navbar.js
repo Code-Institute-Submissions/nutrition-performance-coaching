@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [scroll, setScroll] = useState();
+  const [scroll, setScroll] = useState(false);
   const [open, setOpen] = useState();
 
   const handleOpen = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
         scroll ? "bg-gray-400" : "bg-transparent"
       } fixed flex justify-between items-center w-full z-50 p-4 text-2xl`}
     >
-      <p className="text-white">
+      <p className="text-white z-10">
         <span className="">P</span>
         <span className="font-light">N</span>
         <span className="font-thin">C</span>
@@ -75,12 +75,12 @@ const Navbar = () => {
       <menu
         className={`transform ${
           open ? "-translate-x-0" : "translate-x-full"
-        } top-0 right-0 mt-0 w-5/12 bg-gray-400 fixed h-screen overflow-auto ease-in-out transition-all duration-300 lg:translate-x-0 lg:h-40 lg:w-full`}
+        } top-0 right-0 mt-0 w-5/12 fixed h-screen bg-gray-400 overflow-auto ease-in-out transition-all duration-300 lg:translate-x-0`}
       >
-        <ul className="text-white mt-20 flex flex-col lg:flex-row justify-start w-full lg:mx-auto lg:flex lg:justify-between lg:max-w-screen-sm">
-          <li className="border-b border-yellow-400 pb-1 mb-2 w-20 lg:text-center">Account</li>
-          <li className="border-b border-yellow-400 pb-1 mb-2 w-20 lg:text-center">Teams</li>
-          <li className="border-b border-yellow-400 pb-1 mb-2 w-20 lg:text-center">Payments</li>
+        <ul className="text-white font-light text-lg mt-20 lg:mt-0 flex flex-col lg:flex-row justify-start w-full lg:mx-auto lg:flex lg:justify-between lg:max-w-screen-sm">
+          <li className="mb-4">Account</li>
+          <li className="mb-4">Teams</li>
+          <li className="mb-4">Payments</li>
         </ul>
       </menu>
     </nav>
