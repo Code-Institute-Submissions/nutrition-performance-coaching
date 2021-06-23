@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const Testimonials = () => {
   return (
-    <div className="p-4 text-gray-600 mb-12">
+    <div className="p-4 text-gray-600 mb-12 md:mx-20">
       <h1 className="text-3xl text-gray-900 mb-8">Client Testimonials</h1>
       <div className="flex flex-wrap">
-        <div className="md:w-1/2 w-full flex items-center justify-around">
+        <div className="w-full flex items-center justify-around">
           <div className="w-28">
             <Image
               src="/testimonial2.png"

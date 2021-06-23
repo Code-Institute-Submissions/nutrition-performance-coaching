@@ -3,9 +3,8 @@ export const Program = () => {
     <svg
       id="undraw_shopping_app_flsj"
       xmlns="http://www.w3.org/2000/svg"
-      width="140.145"
-      height="116.953"
       viewBox="0 0 140.145 116.953"
+      className="w-36 h-36 md:w-52 md:h-52 lg:w-80 lg:h-80 xl:w-48 xl:h-48"
     >
       <path
         id="Path_61"
