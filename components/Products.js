@@ -9,6 +9,8 @@ export const Products = () => {
             alt="ecommerce"
             className="lg:w-1/2 lg:h-auto object-cover object-center w-full h-64 rounded"
             src="https://dummyimage.com/400x400"
+            width={400}
+            height={400}
           />
           <div className="lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0 w-full mt-6">
             <h2 className="title-font text-sm tracking-widest text-gray-500">

@@ -5,7 +5,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
 
-const useRedirect = (user) => {
+export default function Login() {
+  const router = useRouter();
+
+  const { user } = useAuth();
+
   useEffect(() => {
     if (user) {
       const redirect = () => {
@@ -14,14 +18,6 @@ const useRedirect = (user) => {
       redirect();
     }
   }, [user]);
-};
-
-export default function Login() {
-  const router = useRouter();
-
-  const { user } = useAuth();
-
-  useRedirect(user);
   return (
     <div>
       <div className="-z-10 fixed w-screen h-screen overflow-hidden">
