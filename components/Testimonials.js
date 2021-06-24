@@ -16,8 +16,8 @@ const Testimonials = () => {
           </div>
           <div className="w-2/3 pl-4">
             <p className="lg:text-xl mb-2">
-              "I got great coaching and now I feel healthier, happier and my
-              performance is through the roof!""
+            I got great coaching and now I feel healthier, happier and my
+              performance is through the roof!
             </p>
             <h3 className="lg:text-2xl mb-2 text-xl font-medium text-gray-900">
               Jane Doe

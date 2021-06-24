@@ -1,9 +1,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [open, setOpen] = useState();
+
+  const router = useRouter();
+
+  const path = router.pathname;
+
+  const { user, logout } = useAuth();
 
   const handleOpen = () => {
     if (!open) {
@@ -29,7 +38,11 @@ const Navbar = () => {
   return (
     <nav
       className={`transition duration-500 ease-in-out transform ${
-        scroll ? "bg-gray-400" : "bg-transparent"
+        scroll
+          ? "bg-gray-400"
+          : `${
+              path == "/" || path == "/login" ? "bg-transparent" : "bg-gray-400"
+            }`
       } fixed flex justify-between items-center w-full z-50 p-4 text-2xl lg:px-20`}
     >
       <Link href="/">
@@ -110,15 +123,34 @@ const Navbar = () => {
       <menu
         className={`transform ${
           open ? "-translate-x-0" : "translate-x-full"
-        } top-0 right-0 mt-0 w-5/12 lg:w-1/3 xl:w-1/4 fixed h-screen bg-gray-400 overflow-auto ease-in-out transition-all duration-300 md:block md:relative md:-translate-x-0 md:h-auto md:my-0 md:bg-transparent`}
+        } top-0 right-0 mt-0 w-5/12 md:w-1/2 xl:w-1/3 fixed h-screen bg-gray-400 overflow-auto ease-in-out transition-all duration-300 md:block md:relative md:-translate-x-0 md:h-auto md:my-0 md:bg-transparent`}
       >
-        <ul className="md:my-auto md:flex-row md:items-center md:justify-between flex flex-col justify-start w-full mt-20 text-lg font-light text-white">
-          <li className="md:mb-0 mb-4">Home</li>
-          <li className="md:mb-0 mb-4">About</li>
-          <li className="md:mb-0 w-20 px-4 py-1 mb-4 text-center bg-yellow-400 rounded">
-            Login
-          </li>
-        </ul>
+        <div className="md:my-auto md:flex-row  md:items-center md:justify-between flex flex-col justify-start w-full mt-20 text-lg font-light text-white">
+          <a className="md:mb-0 md:mr-4 mb-4">Home</a>
+          <a className="md:mb-0 md:mr-4  mb-4">About</a>
+          {user && (
+            <Link href="/dashboard">
+              <a className="md:mb-0 md:mr-4 mb-4">Dashboard</a>
+            </Link>
+          )}
+          {user ? (
+            <Link href="/">
+              <a onClick={logout}>
+                <button className="md:mb-0 px-4 py-1 mb-4 text-center bg-yellow-400 rounded">
+                  Logout
+                </button>
+              </a>
+            </Link>
+          ) : (
+            <Link href="/login">
+              <a>
+                <button className="md:mb-0 px-4 py-1 mb-4 text-center bg-yellow-400 rounded">
+                  Login
+                </button>
+              </a>
+            </Link>
+          )}
+        </div>
       </menu>
     </nav>
   );

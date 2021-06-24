@@ -14,8 +14,8 @@ const Coach = () => {
             years coaching high performing athletes.
           </h5>
           <h5 className="lg:text-2xl mb-4 text-xl font-light">
-            “I specialise in helping women make weight and perform in a safe,
-            efficient and effective manner!” - Lindsey
+          &quot;I specialise in helping women make weight and perform in a safe,
+            efficient and effective manner!&quot; - Lindsey
           </h5>
         </div>
         <div className="lg:w-5/12 relative flex items-center justify-center">
@@ -32,6 +32,7 @@ const Coach = () => {
           </div>
           <Image
             src={"/lindsey-nobg.png"}
+            alt="Lindsey"
             width={500}
             height={500}
             objectFit="cover"
