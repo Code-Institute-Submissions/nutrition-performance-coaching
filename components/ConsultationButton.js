@@ -23,21 +23,28 @@ const ConsultationButon = () => {
             onClick={handleModal}
           ></div>
           <div>
-            <form className="relative flex flex-col w-full max-w-screen-md p-4 mx-auto my-auto text-gray-900 bg-white rounded">
-              <h1 className="md:text-2xl mb-4 text-xl">
+            <form className="relative lg:p-10 flex flex-col w-full max-w-screen-md p-4 mx-auto my-auto text-gray-900 bg-gray-50 rounded">
+      
+              <h1 className="mb-4 lg:mb-8 text-3xl font-medium">
                 Enter your detail below and we will contact you for an
                 appointment
               </h1>
-              <label for="name">Name</label>
-              <input className="w-full p-1 my-2 border rounded" />
-              <label for="name">Email</label>
-              <input className="w-full p-1 my-2 border rounded" />
-              <button
-                type="submit"
-                className="px-2 py-1 mt-1 ml-auto text-white bg-purple-300 rounded"
-              >
-                Submit
-              </button>
+              <div className="flex flex-col">
+                <label className="mb-2 lg:mb-4">Name</label>
+                <input type="text" className="p-1 mb-2"></input>
+              </div>
+              <div className="flex flex-col">
+                <label className="mb-2 lg:mb-4">Email Address</label>
+                <input type="email" className="p-1 mb-4 lg:mb-8"></input>
+              </div>
+              <div className="flex">
+                <button
+                  type="submit"
+                  className="px-2 py-1 ml-auto text-white bg-blue-400 rounded"
+                >
+                  Submit
+                </button>
+              </div>
             </form>
           </div>
         </div>

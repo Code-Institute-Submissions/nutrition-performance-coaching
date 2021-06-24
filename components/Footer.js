@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="bg-gray-100">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <div className="mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row lg:mx-20">
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © 2021 PNC —
             <a

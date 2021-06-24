@@ -3,7 +3,7 @@ import ConsultationButon from "../components/ConsultationButton";
 const HeroVideo = () => {
   return (
     <header className="relative flex flex-col justify-start overflow-y-auto overflow-x-hidden lg:overflow-hidden">
-      <div className="relative z-30 px-4 text-2xl text-white bg-gray-500 bg-opacity-50 w-full h-96 lg:h-screen lg:px-20">
+      <div className="relative z-30 px-4 text-2xl text-white bg-gray-500 bg-opacity-50 w-full h-96 lg:h-screen lg:px-20 mb-6 lg:mb-12">
         <div className="mt-20 lg:mt-40">
           <h1 className="text-4xl mb-6 uppercase lg:text-6xl lg:mb-12">
             Performance
@@ -32,7 +32,7 @@ const HeroVideo = () => {
         <source src="/web16-9video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative text-gray-900 p-4 py-12 md:mx-20 lg:hidden">
+      <div className="relative text-gray-900 p-4 py-6 md:mx-20 lg:hidden">
         <h5 className="text-2xl mb-5">
           We believe Women perform best through tailored nutritional coaching
         </h5>
