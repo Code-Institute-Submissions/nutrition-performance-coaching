@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -31,11 +32,15 @@ const Navbar = () => {
         scroll ? "bg-gray-400" : "bg-transparent"
       } fixed flex justify-between items-center w-full z-50 p-4 text-2xl lg:px-20`}
     >
-      <p className="text-white z-10">
-        <span className="">P</span>
-        <span className="font-light">N</span>
-        <span className="font-thin">C</span>
-      </p>
+      <Link href="/">
+        <a>
+          <p className="z-10 text-white">
+            <span className="">P</span>
+            <span className="font-light">N</span>
+            <span className="font-thin">C</span>
+          </p>
+        </a>
+      </Link>
       {open ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +48,7 @@ const Navbar = () => {
           height={15}
           viewBox="0 0 17.678 17.678"
           onClick={handleOpen}
-          className="z-50 md:hidden"
+          className="md:hidden z-50"
         >
           <line
             id="Line_7"
@@ -71,7 +76,7 @@ const Navbar = () => {
           height={15}
           viewBox="0 0 24 15"
           onClick={handleOpen}
-          className="z-50 md:hidden"
+          className="md:hidden z-50"
         >
           <line
             id="Line_2"
@@ -107,10 +112,10 @@ const Navbar = () => {
           open ? "-translate-x-0" : "translate-x-full"
         } top-0 right-0 mt-0 w-5/12 lg:w-1/3 xl:w-1/4 fixed h-screen bg-gray-400 overflow-auto ease-in-out transition-all duration-300 md:block md:relative md:-translate-x-0 md:h-auto md:my-0 md:bg-transparent`}
       >
-        <ul className="text-white font-light text-lg mt-20 flex flex-col justify-start w-full md:my-auto md:flex-row md:items-center md:justify-between">
-          <li className="mb-4 md:mb-0">Home</li>
-          <li className="mb-4 md:mb-0">About</li>
-          <li className="mb-4 bg-yellow-400 w-20 text-center px-4 py-1 rounded md:mb-0">
+        <ul className="md:my-auto md:flex-row md:items-center md:justify-between flex flex-col justify-start w-full mt-20 text-lg font-light text-white">
+          <li className="md:mb-0 mb-4">Home</li>
+          <li className="md:mb-0 mb-4">About</li>
+          <li className="md:mb-0 w-20 px-4 py-1 mb-4 text-center bg-yellow-400 rounded">
             Login
           </li>
         </ul>
