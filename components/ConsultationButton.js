@@ -15,7 +15,7 @@ const ConsultationButon = () => {
     e.preventDefault();
     setLoading(true);
 
-    // 3. Send a request to our API with the user's email address.
+    // Send a request to stripe API with the user's email address.
     const res = await fetch("/api/lead", {
       body: JSON.stringify({
         email: e.target.email.value,
@@ -30,14 +30,14 @@ const ConsultationButon = () => {
     const { error } = await res.json();
 
     if (error) {
-      // 4. If there was an error, update the message in state.
+      // If there was an error, update the message in state.
       setLoading(false);
       setMessage("Oops, something went wrong! Please contact info@ecjja.com");
 
       return;
     }
 
-    // 5. Clear the input value and show a success message.
+    // Clear the input value and show a success message.
     setLoading(false);
     e.target.name.value = "";
     e.target.email.value = "";

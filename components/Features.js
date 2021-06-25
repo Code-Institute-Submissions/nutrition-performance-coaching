@@ -12,7 +12,7 @@ const Features = () => {
         Our goal is to provide you with the best nutrition for the best
         performance through very simple process:
       </h5>
-      <div className="xl:grid-cols-3 grid grid-cols-1">
+      <div className="xl:grid-cols-3 grid grid-cols-1 gap-1 xl:gap-0">
         <div className="grid-row-2 xl:grid-flow-row grid grid-cols-2 col-span-1 gap-1">
           <div className="xl:order-last col-span-1 row-span-2">
             <Journal />
