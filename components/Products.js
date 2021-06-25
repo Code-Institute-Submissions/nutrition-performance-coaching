@@ -75,7 +75,7 @@ export const Products = () => {
               {user && !loadingUser ? (
                 <button
                   onClick={handleSubmit}
-                  className="focus:outline-none hover:bg-indigo-600 flex px-6 py-2 ml-auto text-white bg-indigo-500 border-0 rounded"
+                  className="focus:outline-none hover:bg-blue-600 flex px-6 py-2 ml-auto text-white bg-blue-500 border-0 rounded"
                 >
                   {!message && loading && (
                     <svg

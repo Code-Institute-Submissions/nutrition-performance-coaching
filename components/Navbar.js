@@ -135,7 +135,7 @@ const Navbar = () => {
             <a onClick={handleOpen} className="md:mb-0 md:mr-4 mb-4">
               About
             </a>
-          </Link>{" "}
+          </Link>
           {user && (
             <Link href="/dashboard">
               <a onClick={handleOpen} className="md:mb-0 md:mr-4 mb-4">
