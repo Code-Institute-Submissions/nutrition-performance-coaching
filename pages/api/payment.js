@@ -32,12 +32,11 @@ export default async (req, res) => {
       ],
     });
     if (session) {
-
       const message = {
         from: "hello@sammcnally.dev",
         to: "hello@sammcnally.dev",
         subject: `New checkout initiated from ${email}`,
-        text: `A checkout session for the a coaching program has just been initiated. You will receive a confirmation email in this thread once their payment has been approved.`,
+        text: `A checkout session for the a coaching program has just been initiated by ${email}. You will receive a confirmation email in this thread once their payment has been approved.`,
         replyTo: email,
       };
       await sgMail.send(message);
@@ -46,13 +45,13 @@ export default async (req, res) => {
     }
   } catch (error) {
     const message = {
-        from: "hello@sammcnally.dev",
-        to: "hello@sammcnally.dev",
-        subject: `Urgent notification`,
-        text: `Payment Failed ${error.message} for user ${email}`,
-        replyTo: "hello@sammcnally.dev",
-      };
-      await sgMail.send(message);
+      from: "hello@sammcnally.dev",
+      to: "hello@sammcnally.dev",
+      subject: `Urgent notification`,
+      text: `Payment Failed ${error.message} for user ${email}`,
+      replyTo: "hello@sammcnally.dev",
+    };
+    await sgMail.send(message);
     return res.status(500).json({ error: error.message || error.toString() });
   }
 };
