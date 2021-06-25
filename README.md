@@ -172,6 +172,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - mixkit.co - Video footage came from mixkit
 - undraw.co - Icons came from undraw.co
 
+- firebase auth - code for firebase auth was provided by firebase
+
 
 
 ### Acknowledgments
