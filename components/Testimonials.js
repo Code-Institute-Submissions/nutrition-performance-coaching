@@ -9,6 +9,7 @@ const Testimonials = () => {
           <div className="w-28 lg:w-36">
             <Image
               src="/testimonial2.png"
+              alt="testimonial"
               width={140}
               height={140}
               className="rounded-full"

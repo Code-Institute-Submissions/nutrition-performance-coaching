@@ -21,9 +21,8 @@ const useSession = (session_id) => {
 
           const result = await res.json();
 
-          if (session == null) {
             setSession(result);
-          }
+      
         } catch (error) {
           setError(error.message);
         }

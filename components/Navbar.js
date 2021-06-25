@@ -131,13 +131,11 @@ const Navbar = () => {
               Home
             </a>
           </Link>
-          <a
-            onClick={handleOpen}
-            className="md:mb-0 md:mr-4 mb-4"
-            href="/#features"
-          >
-            About
-          </a>
+          <Link href="/#features">
+            <a onClick={handleOpen} className="md:mb-0 md:mr-4 mb-4">
+              About
+            </a>
+          </Link>{" "}
           {user && (
             <Link href="/dashboard">
               <a onClick={handleOpen} className="md:mb-0 md:mr-4 mb-4">
