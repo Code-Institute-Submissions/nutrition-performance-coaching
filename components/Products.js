@@ -53,29 +53,24 @@ export const Products = () => {
           <Image
             alt="ecommerce"
             className="lg:w-1/2 lg:h-auto object-cover object-center w-full h-64 rounded"
-            src="https://dummyimage.com/400x400"
+            src="https://res.cloudinary.com/dmoomgx4p/image/upload/v1624615616/mealplan_ulmtv8.jpg"
             width={400}
             height={400}
           />
           <div className="lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0 w-full mt-6">
             <h2 className="title-font text-sm tracking-widest text-gray-500">
-              BRAND NAME
+              NUTRITION PERFORMANCE COACHING
             </h2>
             <h1 className="title-font mb-1 text-3xl font-medium text-gray-900">
-              The Catcher in the Rye
+              8 Week Meal Plan
             </h1>
             <p className="leading-relaxed">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean shorts keytar banjo tattooed umami
-              cardigan.
+              This 8 week meal plan is design to give you optimal nutrition to achieve your goals!
             </p>
             <div className="mt-5 mb-5 border-b-2 border-gray-100"></div>
             <div className="flex">
               <span className="title-font text-2xl font-medium text-gray-900">
-                €48.00
+                €49.00
               </span>
               {user && !loadingUser ? (
                 <button
@@ -848,7 +843,7 @@ export const Products = () => {
                       </g>
                     </svg>
                   )}
-                  {!message && !loading && "Enroll now"}
+                  {!message && !loading && "Buy Now"}
                   {message && message}
                 </button>
               ) : (

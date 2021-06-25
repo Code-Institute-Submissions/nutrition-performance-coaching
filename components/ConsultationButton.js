@@ -89,7 +89,7 @@ const ConsultationButon = () => {
               <div className="flex">
                 <button
                   type="submit"
-                  className="px-2 py-1 ml-auto text-white bg-blue-400 rounded"
+                  className="px-4 py-1 w-42 ml-auto text-center text-white bg-blue-400 rounded"
                 >
                   {!message && loading && (
                     <svg

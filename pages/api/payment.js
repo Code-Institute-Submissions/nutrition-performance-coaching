@@ -20,12 +20,12 @@ export default async (req, res) => {
           price_data: {
             currency: "eur",
             product_data: {
-              name: "ECJJA 8 Week Beginner Course - July 2021",
+              name: "8 Week Meal Plan",
               images: [
-                "https://res.cloudinary.com/dmoomgx4p/image/upload/v1624269694/ECJJA_BLACK_b6s03s.png",
+                "https://res.cloudinary.com/dmoomgx4p/image/upload/v1624615616/mealplan_ulmtv8.jpg",
               ],
             },
-            unit_amount: 22000,
+            unit_amount: 4900,
           },
           quantity: 1,
         },

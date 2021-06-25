@@ -5,7 +5,7 @@ const Testimonials = () => {
     <div className="md:mx-20 p-4 mb-12 text-gray-600">
       <h1 className="mb-8 text-3xl text-gray-900 lg:hidden">Client Testimonials</h1>
       <div className="flex flex-wrap">
-        <div className="flex items-center justify-between w-full max-w-screen-sm mx-auto">
+        <div className="flex items-center justify-around w-full max-w-screen-sm mx-auto">
           <div className="w-28 lg:w-36">
             <Image
               src="/testimonial2.png"

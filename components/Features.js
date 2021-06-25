@@ -4,7 +4,7 @@ import Perform from "../icons/Perform";
 
 const Features = () => {
   return (
-    <div className="md:mx-20 px-4 py-6 xl:py-12 text-gray-900">
+    <div className="md:mx-20 px-4 py-6 xl:py-16 text-gray-900" id="features">
       <h3 className="lg:text-4xl mb-4 text-3xl">
         Building better female athletes
       </h3>
