@@ -17,7 +17,7 @@ const LogIn = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-gray-50 lg:p-10 lg:my-auto z-30 w-full h-auto max-w-screen-sm p-4 ml-auto text-gray-900 rounded"
+      className="bg-gray-50 lg:p-10 lg:my-auto z-30 w-full h-auto max-w-screen-lg p-4 ml-auto text-gray-900 rounded"
     >
       <h1 className="mb-4 text-3xl font-medium">
         Log in to Nutrition Performance Coaching

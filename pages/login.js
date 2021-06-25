@@ -20,7 +20,7 @@ export default function Login() {
   }, [user]);
   return (
     <div>
-      <div className="-z-10 fixed w-screen h-screen overflow-hidden">
+      <div className="-z-10 w-screen h-screen relative">
         <Image
           alt="background"
           src="/bg.jpg"
@@ -29,7 +29,7 @@ export default function Login() {
           objectFit="cover"
           quality={100}
         />
-        <div className="xl:px-20 relative w-full h-full p-4 text-white bg-gray-500 bg-opacity-50">
+        <div className="xl:px-20 relative w-full h-full z-10 p-4 text-white bg-gray-500 bg-opacity-50">
           <div className="lg:pt-40 lg:flex pt-20">
             <div className="lg:w-1/2">
               <h1 className="lg:text-6xl lg:mb-12 mb-6 text-4xl uppercase">
@@ -42,10 +42,10 @@ export default function Login() {
                 Programming
               </h3>
             </div>
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 pb-24">
               <LogIn />
             </div>
-            <h5 className="md:right-4 lg:right-20 absolute bottom-0 mb-5 text-lg uppercase">
+            <h5 className="md:right-4 hidden lg:block lg:right-20 absolute bottom-0 mb-5 text-lg uppercase">
               Creating output optimised by input
             </h5>
           </div>
