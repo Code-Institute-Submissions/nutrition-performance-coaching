@@ -16,7 +16,7 @@ if (!firebase.apps.length) {
     firebase.initializeApp(credentials);
     
  }else {
-    firebase.app(); // if already initialized, use that one
+    firebase.app(); 
  }
 
  export const auth = firebase.auth()

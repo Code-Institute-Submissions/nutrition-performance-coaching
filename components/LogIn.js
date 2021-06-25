@@ -8,6 +8,7 @@ const LogIn = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
+  //Firebase login
   const handleSubmit = (e) => {
     e.preventDefault();
     login(emailRef.current.value, passwordRef.current.value);

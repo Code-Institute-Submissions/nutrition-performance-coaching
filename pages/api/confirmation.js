@@ -24,11 +24,11 @@ export default async (req, res) => {
     return res.status(201).json(session);
   } catch (error) {
     const message = {
-        from: "info@ecjja.com",
+        from: "hello@sammcnally.dev",
         to: "hello@sammcnally.dev",
         subject: `Confrimation falied`,
         text: `Payment confimaiton failed ${error.message}`,
-        replyTo: "info@ecjja.com",
+        replyTo: "hello@sammcnally.dev",
       };
       await sgMail.send(message);
     return res.status(500).json({
