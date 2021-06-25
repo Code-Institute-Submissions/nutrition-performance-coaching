@@ -26,7 +26,7 @@ const ConsultationButon = () => {
             <form className="relative lg:p-10 flex flex-col w-full max-w-screen-md p-4 mx-auto my-auto text-gray-900 bg-gray-50 rounded">
       
               <h1 className="mb-4 lg:mb-8 text-3xl font-medium">
-                Enter your detail below and we will contact you for an
+                Enter your detail below and we will contact you for a 15 minute
                 appointment
               </h1>
               <div className="flex flex-col">

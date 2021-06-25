@@ -1,6 +1,23 @@
 import Image from "next/image";
+import LogIn from "../components/LogIn";
+
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
+  const router = useRouter();
+
+  const { user } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      const redirect = () => {
+        router.push("/dashboard");
+      };
+      redirect();
+    }
+  }, [user]);
   return (
     <div>
       <div className="-z-10 fixed w-screen h-screen overflow-hidden">
@@ -8,6 +25,7 @@ export default function Login() {
           alt="background"
           src="/bg.jpg"
           layout="fill"
+          ws
           objectFit="cover"
           quality={100}
         />
@@ -25,27 +43,7 @@ export default function Login() {
               </h3>
             </div>
             <div className="lg:w-1/2">
-              <form className="bg-gray-50 z-30 w-full h-auto max-w-screen-sm p-4 ml-auto lg:p-10 lg:my-auto text-gray-900 rounded">
-                <h1 className="mb-4 text-3xl font-medium">
-                  Log in to Nutrition Performance Coaching
-                </h1>
-                <div className="flex flex-col">
-                  <label className="mb-2">Email Address</label>
-                  <input type="email" className="p-1 mb-2"></input>
-                </div>
-                <div className="flex flex-col">
-                  <label className="mb-2">Password</label>
-                  <input type="password" className="p-1 mb-4"></input>
-                </div>
-                <div className="flex">
-                  <button
-                    type="submit"
-                    className="px-2 py-1 ml-auto text-white bg-blue-400 rounded"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+              <LogIn />
             </div>
             <h5 className="md:right-4 lg:right-20 absolute bottom-0 mb-5 text-lg uppercase">
               Creating output optimised by input
