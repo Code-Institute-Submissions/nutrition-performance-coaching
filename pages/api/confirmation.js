@@ -1,11 +1,5 @@
 const stripe = require("stripe")(process.env.STRIPE_SK);
 const sgMail = require("@sendgrid/mail");
-import mailchimp from "@mailchimp/mailchimp_marketing";
-
-mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,
-  server: process.env.MAILCHIMP_API_SERVER, // e.g. us1
-});
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -17,19 +11,14 @@ export default async (req, res) => {
     if (session) {
 
       const message = {
-        from: "info@ecjja.com",
-        to: "info@ecjja.com",
+        from: "hello@sammcnally.dev",
+        to: "hello@sammcnally.dev",
         subject: `New checkout initiated from ${session.customer_email}`,
         text: `${session.customer_email} has just confimered their payment `,
         replyTo: session.customer_email,
       };
       await sgMail.send(message);
       
-      const response = await mailchimp.lists.updateListMemberTags(
-        process.env.NEWSLETTER_AUDIENCE_ID,
-        session.customer_email,
-        { tags: [{ name: "July Beginners Course 2021", status: "active" }] }
-      );
     }
 
     return res.status(201).json(session);
